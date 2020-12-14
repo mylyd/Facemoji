@@ -1,0 +1,45 @@
+{
+  "interval": [
+    1440,
+    1440,
+    1440
+  ],
+  "messages": [
+    [
+      {
+        "order": 1,
+        "time_interval": 5,
+        "title": "You know that？\uD83E\uDDD0",
+        "desc": "Which Disney movie\uD83D\uDC49？\uD83D\uDC22\uD83D\uDC22\uD83D\uDC22\uD83D\uDC22\uD83D\uDC00",
+        "icon_url": "https://www.coldchick.xyz/uploads/gamepic/Helix-Jump.jpg",
+        "preview_url": "",
+        "link": "",
+        "id": 1101
+      }
+    ],
+    [
+      {
+        "order": 2,
+        "time_interval": 20,
+        "title": "Hey!\uD83D\uDE4B\uD83D\uDE4B\u200D♂️",
+        "desc": "Come and check out \uD83C\uDD95 emojis on traffic!",
+        "icon_url": "https://www.coldchick.xyz/uploads/gamepic/Don-T-Crash.jpg",
+        "preview_url": "",
+        "link": "",
+        "id": 1102
+      }
+    ],
+    [
+      {
+        "order": 3,
+        "time_interval": 1440,
+        "title": "\uD83E\uDD84\uD83E\uDD8A\uD83D\uDC2E\uD83D\uDC38\uD83E\uDD81\uD83D\uDC37\uD83D\uDC2F",
+        "desc": "\uD83D\uDE17\uD83D\uDC8BSo that’s what they love\uD83D\uDC47!",
+        "icon_url": "https://www.coldchick.xyz/uploads/gamepic/Slices.jpg",
+        "preview_url": "",
+        "link": "",
+        "id": 1103
+      }
+    ]
+  ]
+}

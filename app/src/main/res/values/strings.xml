@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Facemoji</string>
+    <string name="app_gp">https://play.google.com/store/apps/details?id=com.facemoji.cute.yellow.face.free.gif.rose.love.emojis.stickers.live.heart</string>
+
+    <string name="gms_app_id">ca-app-pub-3707640778474213~8689197591</string>
+    <string name="fb_app_id">1505608159827594</string>
+    <string name="privacy_url">https://sites.google.com/view/facemojis</string>
+
+    <string name="diversion_lovemoji_url">https://play.google.com/store/apps/details?id=com.lovemoji.emoji.stickers.live.heart.gif</string>
+    <string name="diversion_vemoji_url">https://play.google.com/store/apps/details?id=com.vemoji.sticker</string>
+    <string name="diversion_smilemoji_url">https://play.google.com/store/apps/details?id=com.smilemoji.yellow.facemoji.love.emojis.stickers.live.heart.gif</string>
+
+    <!--App-->
+    <string name="download_success">Emoji downloaded successfully</string>
+    <string name="download_fail">Emoji download failed</string>
+    <string name="google_pay">Failed to get google product</string>
+    <string name="whether_to_buy">You have already purchased this type of service</string>
+    <string name="google_success">Successful purchase</string>
+    <string name="roboto_regular" translatable="false">sans-serif</string>
+    <string name="item_setting">Setting</string>
+    <string name="item_vip">No Ads</string>
+    <string name="more_apps">More Apps</string>
+    <string name="item_like">Like it?</string>
+    <string name="share_app">Share</string>
+    <string name="love_moji">Lovemoji</string>
+    <string name="smilemoji">Smilemoji</string>
+    <string name="v_moji">Vemoji</string>
+    <string name="privacy">Privacy&amp;Policy</string>
+    <string name="setting_news_push">News push</string>
+    <string name="email">E-mail</string>
+    <string name="email_hint">Please enter your email address</string>
+    <string name="opinions">Questions and opinions</string>
+    <string name="opinions_hint">Please enter the problem description so that we can provide better help</string>
+    <string name="opinions_text_count">0/200</string>
+    <string name="submit">Submit</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_success">We have received your feedback , thanks !</string>
+    <string name="feedback_failed">feedback failed</string>
+    <string name="feedback_error">Email and feedback content are not empty</string>
+    <string name="like_title">5 Star Reviews</string>
+    <string name="like_content">If you think our products are good, please give us 5 star praise!</string>
+    <string name="like_dislike">Dislike</string>
+    <string name="like_start">5 Star</string>
+    <string name="like_no_ads">No Ads</string>
+    <string name="like_usd">$1 Unlock For Life</string>
+    <string name="like_unlock_all_emoji">Unlock all emoji</string>
+    <string name="like_upgrade_to_premium">Upgrade To Premium</string>
+    <string name="share_app_content">Hey! I\'m using Facemoji, come and join us! https://play.google.com/store/apps/details?id=com.facemoji.cute.yellow.face.free.gif.rose.love.emojis.stickers.live.heart</string>
+    <string name="share_content_is_empty">Share content cannot be empty</string>
+    <string name="add_to_whatsapp">Add to Whatsapp</string>
+    <string name="add_pack_fail_prompt_update_whatsapp">Sticker pack not added. If you\'d like to add it, make sure you update to the latest version of WhatsApp.</string>
+    <string name="title_validation_error">Error with the pack</string>
+    <string name="sticker_pack_added_to_whatsapp">Sticker pack added to WhatsApp</string>
+
+
+
+</resources>

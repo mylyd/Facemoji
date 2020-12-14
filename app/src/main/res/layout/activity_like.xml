@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.LikeItActivity">
+
+    <FrameLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="25dp">
+
+        <ImageView
+            android:id="@+id/action_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginLeft="4dp"
+            android:src="@mipmap/mip_back" />
+
+        <TextView
+            android:id="@+id/action_title"
+            style="@style/action_text"
+            android:text="@string/item_like"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/like_bg"
+        android:layout_width="300dp"
+        android:layout_height="192dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:src="@mipmap/five_start" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/like_title"
+        android:textColor="#202022"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="32dp"
+        android:gravity="center"
+        android:text="@string/like_content"
+        android:textColor="#202022"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_like_start"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/button_like"
+            android:gravity="center"
+            android:text="@string/like_start"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_like_dislike"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/like_dislike"
+            android:textColor="#202022"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

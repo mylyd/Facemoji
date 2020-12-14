@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!--主色-->
+    <color name="themes_color">#F4752E</color>
+    <!--drawer 背景色-->
+    <color name="drawer_color">#FFFFFF</color>
+    <!--vip 背景色-->
+    <color name="vip_color">#200032</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="drawer_selected">#F5F8FB</color>
+    <!--switch 背景色-->
+    <color name="shape_switch_bg">#E0E0E0</color>
+    <!--switch 按钮色-->
+    <color name="shape_switch">#2E86F4</color>
+
+    <color name="black">#FF000000</color>
+</resources>

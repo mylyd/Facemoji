@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "412905812502",
+    "firebase_url": "https://facemoji-646f7.firebaseio.com",
+    "project_id": "facemoji-646f7",
+    "storage_bucket": "facemoji-646f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412905812502:android:835989d07dd9d3f6887b37",
+        "android_client_info": {
+          "package_name": "com.facemoji.cute.yellow.face.free.gif.rose.love.emojis.stickers.live.heart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412905812502-o5rcpfmc4amhgfbggghk23hb38teq5rj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKORz8dVfRg-Uov0Dws5WW3sA-YNlfAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412905812502-o5rcpfmc4amhgfbggghk23hb38teq5rj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

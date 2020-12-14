@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <!-- 底部导航栏半透明(fitsSystemWindows==true状态栏和导航栏位置不会与布局中的元素重叠)-->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!-- Android 5.x 开始需要把状态栏颜色设为透明，否则会呈现系统默认的灰色 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/system_bg</item>
+    </style>
+</resources>

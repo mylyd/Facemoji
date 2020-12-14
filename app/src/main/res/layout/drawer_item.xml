@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:id="@+id/item_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/button_drawer_item_round">
+
+        <ImageView
+            android:id="@+id/iv_drawer_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:src="@mipmap/mip_drawer_setting" />
+
+        <TextView
+            android:id="@+id/tv_setting"
+            style="@style/textDrawer"
+            android:text="@string/item_setting" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mip_item_up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_drawer_item_round_top">
+
+        <ImageView
+            android:id="@+id/iv_drawer_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:src="@mipmap/mip_drawer_vip" />
+
+        <TextView
+            android:id="@+id/tv_vip"
+            style="@style/textDrawer"
+            android:text="@string/item_vip" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mip_item_up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/button_drawer_item">
+
+        <ImageView
+            android:id="@+id/iv_drawer_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:src="@mipmap/mip_drawer_share" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            style="@style/textDrawer"
+            android:text="@string/share_app" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mip_item_up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_like"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/button_drawer_item_round_bottom">
+
+        <ImageView
+            android:id="@+id/iv_drawer_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:src="@mipmap/mip_drawer_like" />
+
+        <TextView
+            android:id="@+id/tv_like"
+            style="@style/textDrawer"
+            android:text="@string/item_like" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mip_item_up"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="24dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/more_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_drawer_item_round_top">
+
+        <ImageView
+            android:id="@+id/iv_drawer_moji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="24dp"
+            android:src="@mipmap/mip_drawer_app" />
+
+        <TextView
+            android:id="@+id/tv_moji"
+            style="@style/textDrawer"
+            android:text="@string/more_apps" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/drawer_app_pack" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_app_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/button_drawer_item_round_bottom">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D8D8D8"/>
+
+        <TextView
+            android:id="@+id/diversion_smilemoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/button_drawer_item"
+            android:drawableRight="@mipmap/mip_item_up"
+            android:drawableLeft="@mipmap/diversion_smilemoji"
+            android:drawablePadding="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/smilemoji"
+            android:textColor="#111213" />
+
+        <TextView
+            android:id="@+id/diversion_lovemoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/button_drawer_item"
+            android:drawableRight="@mipmap/mip_item_up"
+            android:drawableLeft="@mipmap/diversion_lovemoji"
+            android:drawablePadding="12dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/love_moji"
+            android:textColor="#111213" />
+
+        <TextView
+            android:id="@+id/diversion_vemoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/button_drawer_item"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="15dp"
+            android:drawableRight="@mipmap/mip_item_up"
+            android:drawableLeft="@mipmap/diversion_vemoji"
+            android:drawablePadding="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/v_moji"
+            android:textColor="#111213" />
+
+    </LinearLayout>
+
+</LinearLayout>

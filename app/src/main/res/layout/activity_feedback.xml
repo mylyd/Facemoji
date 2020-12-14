@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F3F5F9"
+    tools:context=".activity.FeedbackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F5F9"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/white"
+            android:paddingTop="25dp">
+
+            <ImageView
+                android:id="@+id/action_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:padding="8dp"
+                android:src="@mipmap/mip_back" />
+
+            <TextView
+                android:id="@+id/action_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/feedback"
+                android:textColor="#282F3C"
+                android:textSize="@dimen/action_text_size" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/feedback_style"
+                android:layout_marginTop="16dp"
+                android:text="@string/email" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/email_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:textColor="#111213"
+                android:textColorHint="#B3B4B5"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    style="@style/feedback_style"
+                    android:layout_gravity="center_vertical|left"
+                    android:text="@string/opinions" />
+
+                <TextView
+                    android:id="@+id/opinions_size"
+                    style="@style/feedback_style"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/opinions_text_count" />
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/opinions"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:gravity="left"
+                android:hint="@string/opinions_hint"
+                android:maxLength="200"
+                android:padding="20dp"
+                android:textColor="#111213"
+                android:textColorHint="#B3B4B5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/feedback_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/button_feedback"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
