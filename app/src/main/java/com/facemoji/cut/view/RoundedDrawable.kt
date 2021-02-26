@@ -31,7 +31,7 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
     private var mRebuildShader = true
 
     /**
-     * @return the corner radius.
+     * @return 角度半径
      */
     var cornerRadius = 0f
         private set
@@ -192,9 +192,7 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
     }
 
     private fun redrawBitmapForSquareCorners(canvas: Canvas) {
-        // no square corners
         if (all(mCornersRounded)) return
-        // no round corners
         if (cornerRadius == 0f) return
 
         val left = mDrawableRect.left
@@ -221,9 +219,9 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
     }
 
     private fun redrawBorderForSquareCorners(canvas: Canvas) {
-        // no square corners
+        // 没有方角
         if (all(mCornersRounded)) return
-        // no round corners
+        // 没有圆角
         if (cornerRadius == 0f) return
 
         val left = mDrawableRect.left
@@ -283,49 +281,42 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
     override fun getIntrinsicHeight(): Int = mBitmapHeight
 
     /**
-     * @param corner the specific corner to get radius of.
-     * @return the corner radius of the specified corner.
+     * @param corner 需要获取圆角半径的角标 ，参考Corner参数定义
+     * @return 指定角标的圆角半径
      */
     fun getCornerRadius(corner: Int): Float = if (mCornersRounded[corner]) cornerRadius else 0f
 
     /**
-     * Sets all corners to the specified radius.
-     *
-     * @param radius the radius.
-     * @return the [RoundedDrawable] for chaining.
+     * 设置角标的圆角
+     * @param radius 圆角角度
+     * @param corner 设置指定角时指定值，为空时默认为设置全部角
+     * @return the [RoundedDrawable]
      */
-    fun setCornerRadius(radius: Float): RoundedDrawable {
-        setCornerRadius(radius, radius, radius, radius)
-        return this
-    }
-
-    /**
-     * Sets the corner radius of one specific corner.
-     *
-     * @param corner the corner.
-     * @param radius the radius.
-     * @return the [RoundedDrawable] for chaining.
-     */
-    fun setCornerRadius(corner: Int, radius: Float): RoundedDrawable {
-        require(!(radius != 0f && cornerRadius != 0f && cornerRadius != radius)) { "Multiple nonzero corner radii not yet supported." }
-        if (radius == 0f) {
-            if (only(corner, mCornersRounded)) cornerRadius = 0f
-            mCornersRounded[corner] = false
+    fun setCornerRadius(radius: Float, @Corner corner: Int?): RoundedDrawable {
+        if (corner == null) { //不是设置指定角
+            setCornerRadius(radius, radius, radius, radius)
         } else {
-            if (cornerRadius == 0f) cornerRadius = radius
-            mCornersRounded[corner] = true
+            require(!(radius != 0f && cornerRadius != 0f && cornerRadius != radius)) {
+                "Multiple nonzero corner radii not yet supported."
+            }
+            if (radius == 0f) {
+                if (only(corner, mCornersRounded)) cornerRadius = 0f
+                mCornersRounded[corner] = false
+            } else {
+                if (cornerRadius == 0f) cornerRadius = radius
+                mCornersRounded[corner] = true
+            }
         }
         return this
     }
 
     /**
-     * Sets the corner radii of all the corners.
-     *
+     * 设置多个不同角的圆角
      * @param topLeft top left corner radius.
      * @param topRight top right corner radius
-     * @param bottomRight bototm right corner radius.
+     * @param bottomRight bottom right corner radius.
      * @param bottomLeft bottom left corner radius.
-     * @return the [RoundedDrawable] for chaining.
+     * @return the [RoundedDrawable]
      */
     fun setCornerRadius(
         topLeft: Float,
@@ -352,15 +343,26 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         return this
     }
 
+    /**
+     * 设置边框宽度
+     * @param width 宽度
+     */
     fun setBorderWidth(width: Float): RoundedDrawable {
         borderWidth = width
         mBorderPaint.strokeWidth = borderWidth
         return this
     }
 
+    /**
+     * 获取边框色值
+     */
     val borderColor: Int
         get() = borderColors.defaultColor
 
+    /**
+     * 设置边框色值
+     * @param color 色值
+     */
     fun setBorderColor(@ColorInt color: Int): RoundedDrawable =
         setBorderColor(ColorStateList.valueOf(color))
 
@@ -370,11 +372,17 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         return this
     }
 
+    /**
+     * 是否设置成椭圆
+     */
     fun setOval(oval: Boolean): RoundedDrawable {
         isOval = oval
         return this
     }
 
+    /**
+     * 设置比列类型
+     */
     fun setScaleType(scaleType: ScaleType?): RoundedDrawable {
         var scaleType = scaleType
         if (scaleType == null) scaleType = ScaleType.FIT_CENTER
@@ -385,6 +393,9 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         return this
     }
 
+    /**
+     * 设置X 图块模式
+     */
     fun setTileModeX(tileModeX: TileMode): RoundedDrawable {
         if (this.tileModeX != tileModeX) {
             this.tileModeX = tileModeX
@@ -394,6 +405,9 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         return this
     }
 
+    /**
+     * 设置Y 图块模式
+     */
     fun setTileModeY(tileModeY: TileMode): RoundedDrawable {
         if (this.tileModeY != tileModeY) {
             this.tileModeY = tileModeY
@@ -403,6 +417,9 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         return this
     }
 
+    /**
+     * 获取bitmap
+     */
     fun toBitmap(): Bitmap? = drawableToBitmap(this)
 
     companion object {
@@ -415,13 +432,13 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
         @JvmStatic
         fun fromDrawable(drawable: Drawable?): Drawable? {
             if (drawable != null) {
-                // just return if it's already a RoundedDrawable
+                //已经是RoundedDrawable就返回
                 when (drawable) {
                     is RoundedDrawable -> return drawable
                     is LayerDrawable -> {
                         val num = drawable.numberOfLayers
 
-                        // loop through layers to and change to RoundedDrawables if possible
+                        //遍历图层并在可能的情况下更改为RoundedDrawables
                         for (i in 0 until num) {
                             val d = drawable.getDrawable(i)
                             drawable.setDrawableByLayerId(drawable.getId(i), fromDrawable(d))
@@ -429,8 +446,6 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
                         return drawable
                     }
                     is NinePatchDrawable -> return drawable
-                    // cannot resolve NinePatchDrawable
-                    // try to get a bitmap from the drawable and
                     else -> {
                         val bm = drawableToBitmap(drawable)
                         if (bm != null) return RoundedDrawable(bm)
@@ -452,7 +467,7 @@ class RoundedDrawable(private val sourceBitmap: Bitmap) : Drawable() {
                 drawable.draw(canvas)
             } catch (e: Exception) {
                 e.printStackTrace()
-                Log.w(TAG, "Failed to create bitmap from drawable!")
+                Log.e(TAG, "Failed to create bitmap from drawable!")
                 bitmap = null
             }
             return bitmap

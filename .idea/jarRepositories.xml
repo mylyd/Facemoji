@@ -31,5 +31,10 @@
       <option name="name" value="maven2" />
       <option name="url" value="http://maven.baina.com:6081/repository/maven-releases/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="BintrayJCenter" />
+      <option name="name" value="BintrayJCenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
+    </remote-repository>
   </component>
 </project>

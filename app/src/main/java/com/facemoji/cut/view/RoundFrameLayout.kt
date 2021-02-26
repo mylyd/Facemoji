@@ -2,14 +2,15 @@ package com.facemoji.cut.view
 
 import android.content.Context
 import android.graphics.*
+import android.os.Build
 import android.util.AttributeSet
 import android.widget.FrameLayout
+import androidx.annotation.RequiresApi
 import com.facemoji.cut.R
 
 /**
  * 圆角FrameLayout
- *
- * @author jzhou
+ * @Description 一个存在的bug,使用圆角时，不能给圆角FrameLayout设置background ，否则会圆角失效
  */
 class RoundFrameLayout @JvmOverloads constructor(
     context: Context,
@@ -23,12 +24,10 @@ class RoundFrameLayout @JvmOverloads constructor(
     private val roundPaint: Paint
     private val imagePaint: Paint
 
-    //实现4
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun dispatchDraw(canvas: Canvas) {
         canvas.saveLayer(
-            RectF(0F, 0F, canvas.width.toFloat(), canvas.height.toFloat()),
-            imagePaint,
-            Canvas.ALL_SAVE_FLAG
+            RectF(0F, 0F, canvas.width.toFloat(), canvas.height.toFloat()), imagePaint
         )
         super.dispatchDraw(canvas)
         drawTopLeft(canvas)
